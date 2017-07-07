@@ -10,7 +10,7 @@ class HelloWorldServlet extends HelloworldStack {
 
   get("/") {
      val db = Database.forURL("jdbc:mysql://104.198.91.161/frm", driver="com.mysql.jdbc.Driver", user="root")
-    val query = sql"SELECT id, name FROM frinds".as[(Int, String)]
+    val query = sql"SELECT id, name FROM friends".as[(Int, String)]
     val f:Future[Vector[(Int, String)]] = db.run(query)
             Await.result(f, Duration.Inf) foreach println
 
