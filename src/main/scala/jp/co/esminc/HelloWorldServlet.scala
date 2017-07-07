@@ -17,10 +17,9 @@ class HelloWorldServlet extends HelloworldStack {
     
     <html>
       <body>
-        <h1>Hello, world!</h1>
-        Say <a href="hello-scalate">hello to Scalate</a>.
-
-        { Await.result(f, Duration.Inf) }
+        <h1>Friends list</h1>
+        
+        <p>{ Await.result(f, Duration.Inf) }</p>
 
       </body>
     </html>
